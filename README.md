@@ -2,6 +2,11 @@
 
 基于 [Px228-Da-Da/sonora](https://github.com/Px228-Da-Da/sonora) 的非官方修改版：在 Windows 上观察正在播放的声音，并可通过可选的本地 Python 后端拆轨、试听和比较乐器频谱。
 
+## 下载成品（Windows x64）
+
+到 [Releases](https://github.com/Maiyumeka/sonora-zh/releases/latest) 下载 `Sonora-ZH-Windows-x64-*.zip`，完整解压后双击 `sonora-zh.exe`。提供 SHA256 校验文件；程序未进行数字签名。
+
+这是免安装轻量版，实时音频分析可以直接使用；**拆轨、多轨试听和分轨曲线仍需自行准备 Python 后端及模型**，详见 [后端说明](backend/README.md)。成品不附带模型、Python/CUDA/FFmpeg 运行环境、歌曲、缓存或日志；如系统提示缺少 C++ 运行库，请从微软官方安装 x64 版本。
 
 ## 改动
 
