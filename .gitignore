@@ -1,0 +1,51 @@
+# Build products and packaged applications
+/target/
+/dist/
+/build/
+*.exe
+*.dll
+*.pdb
+*.lib
+*.whl
+*.zip
+*.7z
+*.tar.gz
+# Local runtimes, dependencies and caches
+/.venv/
+/venv/
+/backend/.venv/
+/backend/runtime/
+/backend/bin/
+/backend/cache/
+/backend/tmp/
+/backend/models/
+/backend/songs/
+/backend/test-data/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Model weights and audio, even if accidentally placed elsewhere
+*.th
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.opus
+*.m4a
+*.aac
+*.aiff
+# Local state and credentials
+*.log
+.env
+.env.*
+!.env.example
+/backend/requirements-before-cuda.txt
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store

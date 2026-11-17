@@ -1,0 +1,34 @@
+[package]
+name = "sonora"
+version = "0.1.0"
+edition = "2024"
+description = "Real-time audio metering for the desktop — spectrogram, spectrum analyzer, LUFS/peak loudness and a stereo goniometer. Captures system audio (WASAPI loopback) or any input device."
+license = "MIT"
+repository = "https://github.com/Maiyumeka/sonora-zh"
+keywords = ["audio", "metering", "lufs", "spectrogram", "dsp"]
+categories = ["multimedia::audio", "visualization"]
+
+[dependencies]
+cpal = "0.18.1"
+eframe = "0.35.0"
+rustfft = "6.4.1"
+hound = "3.5.1"
+serde_json = "1"
+
+# Per-application capture uses WASAPI process loopback, which cpal does not expose.
+[target.'cfg(windows)'.dependencies]
+windows-core = "0.62"
+windows = { version = "0.62", features = [
+    "Win32_Foundation",
+    "Win32_UI_Controls_Dialogs",
+    "Win32_Media_Audio",
+    "Win32_Media_Audio_Endpoints",
+    "Win32_System_Com",
+    "Win32_System_Com_StructuredStorage",
+    "Win32_System_Threading",
+    "Win32_System_Variant",
+] }
+
+[profile.release]
+opt-level = 3
+lto = true
